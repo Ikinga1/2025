@@ -1,157 +1,144 @@
-/* Estilo general */
+/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
 }
 
 header {
   background-color: #333;
   color: white;
-  padding: 1rem;
+  padding: 50px;
   text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 50px;
+}
+
+header p {
+  margin: 5px 0;
+  font-size: 45px;
 }
 
 nav {
   background-color: #444;
-  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
 }
 
 nav a {
   color: white;
-  padding: 1rem;
   text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s, color 0.3s;
+  margin: 0 15px;
 }
 
 nav a:hover {
-  background-color: #ddd;
-  color: black;
+  text-decoration: underline;
 }
 
-/* Estilo para la zona principal */
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 2rem;
+  padding: 20px;
 }
 
-/* Estilo de cada sección (producto) */
 section {
-  background-color: white;
-  width: 280px;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 22%;
+  padding: 10px;
   text-align: center;
-  transition: transform 0.3s ease;
+  background-color: #f4f4f4;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 section img {
   width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 5px;
 }
 
 section h2 {
-  font-size: 1.2rem;
-  color: #333;
-  margin: 0.5rem 0;
+  font-size: 30px;
+  margin: 10px 0;
 }
 
 section p {
-  font-size: 1rem;
-  color: #666;
+  font-size: 20px;
 }
 
 section button {
-  background-color: #28a745;
+  background-color: #333;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  padding: 10px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+  font-size: 25px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 section button:hover {
-  background-color: #218838;
+  background-color: #555;
 }
 
-/* Estilo del pie de página */
 footer {
   background-color: #333;
   color: white;
-  padding: 1rem;
   text-align: center;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+  padding: 10px;
 }
 
-/* Medias Queries para hacer la página responsiva */
-
-/* Dispositivos móviles (pantallas pequeñas) */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-  nav a {
-    padding: 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  main {
-    padding: 1rem;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  section {
-    width: 90%;
-    margin: 1rem 0;
-  }
-
-  footer {
-    font-size: 0.8rem;
-    padding: 0.8rem;
-  }
-}
-
-/* Tablets en modo retrato (pantallas medianas) */
-@media (max-width: 768px) {
-  main {
-    padding: 1.5rem;
-  }
-
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 1024px) {
   section {
     width: 45%;
   }
 }
 
-/* Dispositivos de escritorio (pantallas grandes) */
-@media (min-width: 1024px) {
-  header h1 {
-    font-size: 2rem;
+/* Media Queries para pantallas muy pequeñas */
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   nav a {
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
+    margin: 10px 0;
   }
 
   main {
-    padding: 2rem;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
 
   section {
-    width: 30%;
+    width: 80%;
+  }
+}
+
+/* Media Queries para móviles */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1rem;
+  }
+
+  section p {
+    font-size: 0.9rem;
+  }
+
+  section button {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }
